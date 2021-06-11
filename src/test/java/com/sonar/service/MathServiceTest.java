@@ -16,8 +16,10 @@ public class MathServiceTest {
 
     @Test
     public void multipliesNumbers() {
+        System.out.println("Testing multiply() started...");
         int result = mathService.multiply(2, 4);
 
         assertThat(result, equalTo(8));
+        System.out.println("Testing multiply() ended...");
     }
 }

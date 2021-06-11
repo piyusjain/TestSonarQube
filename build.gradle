@@ -25,6 +25,9 @@ sonarqube {
         property 'sonar.tests', "${project.projectDir}/src/test/java"
     }
 }
+test {
+    useJUnit()
+}
 tasks['sonarqube'].dependsOn test
 jacocoTestReport {
     reports {
