@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id "org.sonarqube" version "3.2.0"
+    id "jacoco"
 }
 
 group 'com.sonar'
@@ -22,5 +23,12 @@ sonarqube {
         property "sonar.host.url", "https://sonarcloud.io"
         property 'sonar.sources', "${project.projectDir}/src/main/"
         property 'sonar.tests', "${project.projectDir}/src/test"
+    }
+}
+tasks['sonarqube'].dependsOn test
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        csv.enabled false
     }
 }
