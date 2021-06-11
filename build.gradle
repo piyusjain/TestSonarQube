@@ -17,7 +17,6 @@ dependencies {
 
 sonarqube {
     properties {
-        property "sonar.projectKey", "piyusjain_SonarQubeTest"
-        property 'sonar.host.url', 'http://localhost:9000'
+        property "sonar.projectKey", "piyusjain_TestSonarQube"
     }
 }
