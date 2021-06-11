@@ -21,8 +21,8 @@ sonarqube {
         property "sonar.projectKey", "piyusjain_TestSonarQube"
         property "sonar.organization", "piyusjain"
         property "sonar.host.url", "https://sonarcloud.io"
-        property 'sonar.sources', "${project.projectDir}/src/main/"
-        property 'sonar.tests', "${project.projectDir}/src/test"
+        property 'sonar.sources', "${project.projectDir}/src/main/java"
+        property 'sonar.tests', "${project.projectDir}/src/test/java"
     }
 }
 tasks['sonarqube'].dependsOn test
